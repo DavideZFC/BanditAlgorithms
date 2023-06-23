@@ -33,7 +33,7 @@ class epsilon_greedy:
         ''' Chooses which arm to pull
         '''
         p = min(self.epsilon_routine[self.t],1)
-        if (np.random.binomial(1,p)):
+        if (np.random.binomial(1,p)) or min(self.times_pulled)  == 0:
             return np.argmin(self.times_pulled)
         else:
             return np.argmax(self.rewards/self.times_pulled)
