@@ -8,10 +8,10 @@ from classes.algos.RLPE import RLPE
 from functions.make_experiment import make_experiment
 import numpy as np
 
-means = np.array([1., 0.99, 0.95, 0.9, 0.5, 0.])
+means = np.array([1., 0.5, 0.])
 env = GaussianBandit(means)
 
-T = 10000
+T = 1000
 
 policies = []
 labels = []
@@ -39,5 +39,5 @@ label6 = 'RLPE'
 policies = [policy1, policy2, policy3, policy4, policy5, policy6]
 labels = [label1, label2, label3, label4, label5, label6]
 
-make_experiment(policies, env, T, seeds=20, labels=labels, exp_name='RLPE vs everyone')
+make_experiment(policies, env, T, seeds=20, labels=labels, exp_name='RLPE vs everyone short horizon')
 
