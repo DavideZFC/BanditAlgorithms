@@ -10,5 +10,6 @@ functions/: Includes utility functions to support the algorithms.
 
 prova.py: A test script to demonstrate the usage of the implemented algorithms.
 
-Usage
+Usage:
+
 python prova.py
